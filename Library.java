@@ -53,4 +53,16 @@ class Library {
             System.out.println("Neplatný výběr.");
         }
     }
+    public void searchByTitle(String title) {
+        boolean found = false;
+        for (Book book : books) {
+            if (book.getTitle().toLowerCase().contains(title.toLowerCase())) {
+                System.out.println(book.getTitle() + " od " + book.getAuthor());
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("Žádné knihy nenalezeny.");
+        }
+    }
 }

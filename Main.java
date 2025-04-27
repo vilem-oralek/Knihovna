@@ -20,6 +20,7 @@ public class Main {
             System.out.println("2 - Vypůjčit knihu");
             System.out.println("3 - Vrátit knihu");
             System.out.println("4 - Přidat novou knihu");
+            System.out.println("5 - Najít knihu podle názvu");
             System.out.println("0 - Konec");
 
             System.out.print("Zadej volbu: ");
@@ -49,6 +50,11 @@ public class Main {
                     String author = scanner.nextLine();
                     library.addBook(new Book(title, author));
                     System.out.println("Kniha přidána!");
+                    break;
+                case 5:
+                    System.out.print("Zadejte název knihy, kterou chcete hledat: ");
+                    String title = scanner.nextLine();
+                    library.searchByTitle(title);
                     break;
                 case 0:
                     running = false;
